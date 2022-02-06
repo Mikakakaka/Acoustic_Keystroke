@@ -38,5 +38,3 @@ for f in liste :
 mylayout = go.Layout(xaxis=dict(title="spectral_centroid_mean"),
                      yaxis=dict(title="energy_entropy_mean"))
 plotly.offline.iplot(go.Figure(data=plots, layout=mylayout))
-
-

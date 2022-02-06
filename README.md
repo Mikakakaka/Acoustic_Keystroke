@@ -1,3 +1,8 @@
+---
+title: "Acoustic Keystroke"
+author: "Mikael LEGRAIN, Titouan PETIT"
+---
+
 # Acoustic Keystroke Analysis
 ## About The Project
 ***
@@ -15,6 +20,11 @@ In the folder **to_guess/** are present the 6th recordings and the free typing o
 
 ## Installation
 ***
+Clone this project 
+```
+git clone https://github.com/Mikakakaka/Acoustric_Keystroke.git
+```
+
 Before using our tool, you have to install the pyAudioAnalysis library.
 ```
 git clone https://github.com/tyiannak/pyAudioAnalysis.git
@@ -33,7 +43,7 @@ After doing so, you are ready to go.
 ```
 python3 learn.py
 ```
-3. You can see a two-dimensional representation of the parameters for each class in the srcipt **dots.py**.
+3. You can see a two-dimensional representation of the features for each class in the srcipt **dots.py**.
 ```
 python3 dots.py
 ```
@@ -47,3 +57,6 @@ python3 biometry.py
 python3 authentication.py
 ``` 
 
+## Some More Info
+***
+* As you can see in the article quoted above, some parameters can be modified like the length of the frames or the steps. In our case, referring to the different information provided by the pyAudioAnalysis library, it corresponds to the parameters *m_win, m_step, s_win, s_step* in **dots.py** or *mt, st* in **learn.py**. Those values are in seconds.

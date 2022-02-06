@@ -1,5 +1,3 @@
-# Example7: use trained model from Example6 
-# to classify an unknown sample (song)
 from pyAudioAnalysis import audioTrainTest as aT
 from itertools import combinations
 from statistics import *
@@ -27,13 +25,13 @@ for couple in combinations_list :
 
 	for file in files_of_models :
 		if name_1 in file and name_2 in file and "MEANS" not in file:
-			svm_file_name=file
+			model_file_name=file
 
 	for f in files_to_test:
 		file_name=f.split(os.sep)[1]
 		#c, p, p_nam = aT.file_classification(f, svm_file_name,"svm")
 		#c, p, p_nam = aT.file_classification(f, svm_file_name,"knn")
-		c, p, p_nam = aT.file_classification(f, svm_file_name,"svm_rbf")
+		c, p, p_nam = aT.file_classification(f, model_file_name,"svm_rbf")
 		if name_1 not in dico[file_name]:
 			dico[file_name][name_1]=[]
 		if name_2 not in dico[file_name]:
