@@ -17,7 +17,6 @@ In the **data/** folder are present the records necessary to constitute the clas
 The first 5 recordings allow the construction of the model while the 6th (plus a bonus, another shorter sentence) allow to check if the person is well recognized.
 In the folder **to_guess/** are present the 6th recordings and the free typing of the user. 
 
-
 ## Installation
 ***
 Clone this project 
