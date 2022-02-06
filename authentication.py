@@ -40,8 +40,8 @@ for couple in combinations_list :
 
 	for f in files_to_test:
 		file_name=f.split(os.sep)[1]
-		#c, p, p_nam = aT.file_classification(f, svm_file_name,"svm")
-		#c, p, p_nam = aT.file_classification(f, svm_file_name,"knn")
+		#c, p, p_nam = aT.file_classification(f, model_file_name,"svm")
+		#c, p, p_nam = aT.file_classification(f, model_file_name,"knn")
 		c, p, p_nam = aT.file_classification(f, model_file_name,"svm_rbf")
 		if name_1 not in dico[file_name]:
 			dico[file_name][name_1]=[]

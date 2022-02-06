@@ -60,6 +60,10 @@ After doing so, you are ready to go.
 ## Some More Info
 ***
 * As you can see in the article quoted above, some parameters can be modified like the length of the frames or the steps. In our case, referring to the different information provided by the pyAudioAnalysis library, it corresponds to the parameters *m_win, m_step, s_win, s_step* in **dots.py** or *mt, st* in **learn.py**. Those values are in seconds.
+* You can change the type of learning. By default, SVM-RBF is used but pyAudioAnalysis allows to use KNN, SVM or RandomTrees among others. We have tested with SVM-RBF, KNN and SVM but we are not sure about the compatibility with the others. 
+  
+    To make the change, you just have to modify the parameter **"svm-rbf "** in *extract_features_and_train()* of the file **learn.py** or *file_classification()* in **authentication.py** and **biometry.py** depending on the desired strategy. Of course, it is also necessary to modify the nomenclature of the files that use them.
+
 
 ## Errors you can encounter
 ***
