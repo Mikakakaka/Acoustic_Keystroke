@@ -40,23 +40,37 @@ After doing so, you are ready to go.
 1. You must fill in the records in the **data/** folder with the records of the individuals you wish to enroll. Each record must be in a folder named after the desired name for the resulting class.
 2. Once all the records are correctly classified, the SVN-RBF model must be trained via the train.py file. This step will take some time but should only be done once.
 
-```
-python3 learn.py
-```
+    ```
+    python3 learn.py
+    ```
 3. You can see a two-dimensional representation of the features for each class in the srcipt **dots.py**.
-```
-python3 dots.py
-```
+    ```
+    python3 dots.py
+    ```
 4. The records to be identified must be placed in the **to_guess/** folder but must not be classified in subfolders. They are therefore all in the root of the folder. 
 5. Once the training is done and the files are correctly classified, you can classify all the recordmlents via the **biometry.py** script.
-```
-python3 biometry.py
-``` 
+    ```
+    python3 biometry.py
+    ``` 
 6. The script **authentication.py** is the beginning of the authentication protocol. The final idea is to integrate a real time sound recording but for the moment, this program takes the main lines of the **biometry.py** script but asks the user to enter his name. The program will then retrieve all the records and models in which it is present. If the individual is indeed the one recognized by the program, then his authentication is granted. At the moment, this program simply allows to focus on a single individual and to visualize the same information as the first tool but removing all the extra information. 
-```
-python3 authentication.py
-``` 
+    ```
+    python3 authentication.py
+    ``` 
 
 ## Some More Info
 ***
 * As you can see in the article quoted above, some parameters can be modified like the length of the frames or the steps. In our case, referring to the different information provided by the pyAudioAnalysis library, it corresponds to the parameters *m_win, m_step, s_win, s_step* in **dots.py** or *mt, st* in **learn.py**. Those values are in seconds.
+
+## Errors you can encounter
+***
+You might need to deal with the following errors.
+
+* Tkinter not found on linux :
+    ```
+    sudo apt-get install python3-tk
+    ```
+
+* You can encounter some warning about unpickling estimator SVC from certain versions using the regognotion scripts.
+    ```
+    pip install -U scikit-learn
+    ```
