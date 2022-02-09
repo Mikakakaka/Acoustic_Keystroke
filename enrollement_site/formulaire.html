@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet">
+    <title>Enrôlement</title>
+    
+  </head>
+  <body>
+    <div>
+           <h1>Formulaire d'enrôlement</h1>
+      <div>
+        <input type="text" id="txtSurname" placeholder="Écrivez votre NOM" />
+      </div>
+      <div>
+        <input type="text" id="txtName" placeholder="Écrivez votre Prénom" />
+      </div>
+      <div>
+        Écrivez le texte suivant :
+        <p class="toWrite">La biométrie est la vérification de l'identité d'un individu  </p>
+      </div>
+      <p> <strong>Vous devez taper le texte 6 fois. Entre chaque echantillon, appuyer sur la touche Entrée.</strong></p>
+      <button id="startRecord">Commencer l'enregistrement</button>
+
+        <div>
+         
+        <textarea id="msg" name="msg" placeholder="Écrivez le message ci-dessus 6 fois..." style="height: 100px;"></textarea>
+      </div>
+
+      <div id="fin">
+        <button id="stopRecord" disabled>Terminer l'enregistrement</button>      			    
+        <a id="audioDownload"></a> 
+      </div>
+      <div> <audio id="recordedAudio"></audio></div>
+    </div>   
+			
+		<script type="text/javascript" src="js.js"></script>
+    <script type="text/javascript" src="beep.js"></script>
+
+   
+
+  </body>
+</html>

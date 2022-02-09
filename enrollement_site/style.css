@@ -1,0 +1,46 @@
+
+html{
+  font-family: "Gill Sans", sans-serif;
+}
+
+div {
+  padding: 10px;
+  background-color: #f6f6f6;
+  overflow: hidden;
+}
+
+
+input[type="text"],
+textarea,
+select {
+  font: 17px Calibri;
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin:2px;
+}
+
+button{
+  font: 17px Calibri;
+  width: auto;
+  cursor: pointer;  
+  padding: 10px;
+  border-radius: 10px;
+  margin:5px;
+}
+
+#sendButton{
+  background-color:#6da9d6;
+}
+
+.toWrite{
+  background-color: #8dbdc4;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#fin{  
+  float:left;
+}
+
